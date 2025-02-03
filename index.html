@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แกลเลอรีภาพวาด (E-Book)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>แกลเลอรีภาพวาด</h1>
+    </header>
+
+    <section class="upload-section">
+        <h2>อัปโหลดภาพวาดของคุณ</h2>
+        <input type="text" id="imageTitle" placeholder="กรอกชื่อภาพ">
+        <input type="file" id="imageUpload" accept="image/*">
+        <button onclick="uploadImage()">อัปโหลด</button>
+    </section>
+
+    <div class="ebook-container">
+        <button class="nav-btn" onclick="prevPage()">❮</button>
+        <div class="ebook" id="gallery"></div>
+        <button class="nav-btn" onclick="nextPage()">❯</button>
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="modalCaption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
